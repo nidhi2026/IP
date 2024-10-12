@@ -23,6 +23,7 @@ ip_fetcher = """
     fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then(data => {
+            console.log(data.ip);
             document.getElementById('ip_address').innerText = "Your IP Address is: " + data.ip;
         })
         .catch(error => {
