@@ -10,7 +10,7 @@ st.markdown("""
 st.markdown("---")
 
 st.title("Find Your IP Address using ipify")
-ip_address = requests.get('https://api64.ipify.org?format=json').json()
-ipv6 = requests.get('https://api64.ipify.org?format=json&ipv6=true').json()
+ip_address = requests.get('https://api.ipify.org?format=json').json()
+ipv6 = requests.get('https://api64.ipify.org?format=json').json()
 st.write(f"Your IP Address is: {ip_address['ip']}")
 st.write(f"Your IP Address is: {ipv6['ip']}")
