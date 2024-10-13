@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("Find Your IP Address using ipframe")
+st.title("Find Your IP Address using iframe")
 st.markdown("""
     <iframe src="https://api64.ipify.org?format=jsonp&callback=mycallback" 
             style="border:none; height:50px; width:300px;"></iframe>
