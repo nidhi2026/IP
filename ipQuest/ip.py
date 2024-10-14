@@ -26,7 +26,7 @@ st.title("Find Your IP Address using js")
 
 ipv4 = """
 <script>
-    fetch('https://api.ipify.org?format=jsonp&callback=mycallback')
+    fetch('https://api.ipify.org?format=json')
     .then(response => response.text())
     .then(data => {
         // Extract the IP from the returned JSONP response
