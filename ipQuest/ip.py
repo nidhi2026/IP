@@ -1,7 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import requests
-import json
 
 def extract_ip_address(data):
     try:
@@ -87,11 +86,4 @@ ipv6 = """
 
 # HTML component to embed the JavaScript
 components.html(ipv6, height=100)
-
-
-st.markdown("---")
-
-st.title("Find Your IP Address using call")
-st.write(fetch_ip_address('https://api64.ipify.org?format=json'))
-
 
