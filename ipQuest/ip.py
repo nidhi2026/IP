@@ -43,7 +43,7 @@ ipv4 = """
 """
 
 # HTML component to embed the JavaScript
-components.html(ipv4, height=100)
+components.html(ipv4, height=50)
 
 ipv6 = """
 <script>
@@ -64,4 +64,4 @@ ipv6 = """
 """
 
 # HTML component to embed the JavaScript
-components.html(ipv6, height=100)
+components.html(ipv6, height=50)
