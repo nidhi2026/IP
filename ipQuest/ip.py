@@ -2,27 +2,6 @@ import streamlit as st
 import streamlit.components.v1 as components
 import requests
 
-def extract_ip_address(data):
-    try:
-        json_string = data.decode('utf-8')
-        json_data = json.loads(json_string)
-        return json_data.get('ip')
-    except (json.JSONDecodeError, TypeError) as e:
-        print(f"Error extracting IP address: {e}")
-        return None
-
-def fetch_ip_address(url):
-  try:
-    response = requests.get(url)
-    if response.status_code == 200:
-      return extract_ip_address(response.content)
-    else:
-      print("Error fetching ip address")
-
-  except requests.exceptions.RequestException as e:
-    print(f"Error fetching IP: {e}")
-    return None
-
 st.title("Find Your IP Address using iframe")
 st.markdown("""
     <iframe src="https://api64.ipify.org?format=jsonp&callback=mycallback" 
@@ -86,4 +65,3 @@ ipv6 = """
 
 # HTML component to embed the JavaScript
 components.html(ipv6, height=100)
-
