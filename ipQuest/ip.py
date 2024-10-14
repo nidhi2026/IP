@@ -47,7 +47,7 @@ components.html(ipv4, height=100)
 
 ipv6 = """
 <script>
-    fetch('https://api64.ipify.org?format=jsonp&callback=mycallback')
+    fetch('https://api64.ipify.org?format=json')
     .then(response => response.text())
     .then(data => {
         // Extract the IP from the returned JSONP response
