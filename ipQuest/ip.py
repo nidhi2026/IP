@@ -15,7 +15,7 @@ st.markdown("""
 st.markdown("---")
 
 st.title("Find Your IP Address using ipify")
-ip_address = requests.get('https://api.ipify.org?format=json').json()
+ip_address = requests.get('https://api.ipify.org?format=jsonp&callback=mycallback').json()
 ipv6 = requests.get('https://api64.ipify.org?format=json').json()
 st.write(f"Your IP Address is: {ip_address['ip']}")
 st.write(f"Your IP Address is: {ipv6['ip']}")
