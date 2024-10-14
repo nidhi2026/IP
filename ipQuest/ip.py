@@ -66,6 +66,7 @@ ipv6 = """
 # HTML component to embed the JavaScript
 components.html(ipv6, height=50)
 
+st.markdown("---")
 
 def fetch_ip_address(url, ip_type):
     ip_script = f"""
